@@ -255,7 +255,7 @@ footer nav {
     position: absolute;
     bottom: 1.25rem;
     right: 1.25rem;
-    padding: 1rem 2.6rem;
+    padding: 0.7rem 2rem;
     margin: 0;
     color: #FFFFFF;
     background-color: #FF0000;
@@ -329,7 +329,7 @@ footer nav {
 .buy-form {
     background-color: #FFFFFF;
     width: 25rem;
-    height: 30rem;
+    min-height: 30rem;
     padding: 2rem;
 }
 
@@ -356,13 +356,26 @@ footer nav {
 
 .price-car-order {
     position: absolute;
-    right: 0;
+    right: 1.7rem;
     opacity: 0.6;
+}
+.delete {
+    position: absolute;
+    right: 0rem;
+    opacity: 0.6;
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    padding:0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
 }
 
 .buy-form input {
     width: 100%;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     padding: 0.5rem;
     border-radius: 0.5rem;
     border-color: #0000004b;
@@ -380,6 +393,12 @@ footer nav {
 .buy-form .btn {
     border: 0;
     width: 100%;
+    margin: 0;
+}
+.all-prices {
+    text-align: right;
+    margin: 0.5rem 0;
+    font-weight: bold;
 }
 
 .container-contacts {
@@ -419,6 +438,35 @@ footer nav {
 }
 .container-contacts img {
     width: 38.75rem;
+}
+.shop {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background-color: #bebebe;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+
+    background-image: url('./img/shopping.svg');
+    background-position: center;
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+
+}
+.coin-shop {
+    position: absolute;
+    right: 0rem;
+    top: -0.5rem;
+    background-color: #ce0000;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 0.7rem;
 }
 
 @media (max-width: 600px) {

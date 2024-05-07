@@ -21,6 +21,7 @@
             <div class="nav-item"><a href="../">Главная</a></div>
             <div class="nav-item"><a href="../contacts">Контакты</a></div>
             <div class="nav-item"><a href="tel:+73422480827">+7 342 248-08-27</a></div>
+            
         </div>
         <div class="hamb">
             <div class="hamb__field" id="hamb">
@@ -35,7 +36,7 @@
     <main style="margin: 0;">
         <h2>Каталог</h2>
         <div class="catalog">
-            <div class="catalog-card">
+            <div class="catalog-card" data-card="1">
                 <img src="../img/toyota.png" alt="Тойота">
                 <div class="desc-card-catalog">
                     <h4 class="car-title">TOYOTA HIGHLANDER</h4>
@@ -55,9 +56,9 @@
                         <p>Наличие: В наличии</p>
                     </div>
                 </div>
-                <div class="btn btn-buy">Купить</div>
+                <div class="btn btn-buy">В корзину</div>
             </div>
-            <div class="catalog-card">
+            <div class="catalog-card" data-card="2">
                 <img src="../img/exxed.png" alt="иксид">
                 <div class="desc-card-catalog">
                     <h4 class="car-title">EXEED RX</h4>
@@ -77,9 +78,9 @@
                         <p>Комплектация: PLATINUM</p>
                     </div>
                 </div>
-                <div class="btn btn-buy">Купить</div>
+                <div class="btn btn-buy">В корзину</div>
             </div>
-            <div class="catalog-card">
+            <div class="catalog-card" data-card="3">
                 <img src="../img/octavia.jpg" alt="октавия">
                 <div class="desc-card-catalog">
                     <h4 class="car-title">SKODA OKTAVIA</h4>
@@ -97,9 +98,9 @@
                         <p>Цвет: Серый</p>
                     </div>
                 </div>
-                <div class="btn btn-buy">Купить</div>
+                <div class="btn btn-buy">В корзину</div>
             </div>
-            <div class="catalog-card">
+            <div class="catalog-card" data-card="4">
                 <img src="../img/changan.png" alt="чанган">
                 <div class="desc-card-catalog">
                     <h4 class="car-title">CHANGAN UNI-K</h4>
@@ -119,7 +120,7 @@
                         <p>Наличие: В наличии</p>
                     </div>
                 </div>
-                <div class="btn btn-buy">Купить</div>
+                <div class="btn btn-buy">В корзину</div>
             </div>
         </div>
     </main>
@@ -139,17 +140,15 @@
     <div class="modal-buy close-modal">
         <form class="buy-form">
             <div class="title-order">Ваш заказ:</div>
-            <div class="order">
-                <img class="order-car-img" src="../img/changan.png" alt="заказ">
-                <div class="title-car-order">Exxed</div>
-                <div class="price-car-order">3 766 600r.</div>
-            </div>
+            <div class="all-prices"></div>
             <input type="text" name="name" id="name" placeholder="Ваше имя" required>
             <input type="tel" name="tel" id="tel" placeholder="Контактный телефон" required>
             <button class="btn">ОФОРМИТЬ ЗАКАЗ</button>
         </form>
         <div class="close" onclick="closeModal()">x</div>
     </div>
+
+    <div class="shop" onclick="openModal()"><div class="coin-shop">0</div></div>
     
 
     <script src="../index.js"></script>
