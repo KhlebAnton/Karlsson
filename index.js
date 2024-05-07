@@ -3,6 +3,35 @@ const orderForm = modal.querySelector('.buy-form');
 const endPrices = document.querySelector('.all-prices');
 const coinShop = document.querySelector('.coin-shop');
 const catalogCards = document.querySelectorAll('.catalog-card');
+const search = document.getElementById('search');
+
+
+let searchInp = '';
+search.addEventListener('keyup', () => {
+    searchInp = search.value;
+    searchCard(searchInp)
+});
+
+function searchCard(str) {
+
+    catalogCards.forEach((card) => {
+        if (str != '') {
+
+            card.style.display = 'none';
+            let cardName = card.querySelector('.car-title').textContent;
+            if (cardName.toLowerCase().search(str.toLowerCase()) >= 0) {
+                card.style.display = '';
+            }  
+        } else {
+            card.style.display = '';
+        }
+
+    })
+
+}
+
+
+
 
 const buyButtons = document.querySelectorAll('.btn-buy');
 buyButtons.forEach((btn) => {
@@ -59,7 +88,7 @@ function closeModal() {
 };
 
 function deleteOrder(elem) {
-    
+
     let order = elem.closest('.order');
     let dataOrder = order.getAttribute('data-order');
     console.log(dataOrder);
@@ -72,7 +101,7 @@ function deleteOrder(elem) {
 
 function replaceShop(data) {
     catalogCards.forEach((card) => {
-        if(card.getAttribute('data-card') === data) {
+        if (card.getAttribute('data-card') === data) {
             let btn = card.querySelector('.btn');
             btn.style.backgroundColor = "";
             btn.textContent = 'В корзину';
@@ -107,3 +136,5 @@ function closeOnClick() {
     hamb.classList.remove("active");
     body.classList.remove("noscroll");
 }
+
+

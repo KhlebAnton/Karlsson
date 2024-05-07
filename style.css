@@ -234,6 +234,7 @@ footer nav {
     display: flex;
     flex-wrap: wrap;
     gap: 1.6rem;
+    min-height: 20rem;
 }
 
 .catalog-card img {
